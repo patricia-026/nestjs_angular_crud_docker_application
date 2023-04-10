@@ -13,6 +13,8 @@ services:
       - "3000:3000"
     environment:
       DATABASE_URL: postgres://user:password@postgres:5432/db
+    depends_on:
+      - postgres
 
   postgres: 
     image: postgres:14
@@ -32,3 +34,14 @@ services:
     ports:
       - 5050:80
 
+  client:
+    build:
+      context: ./CRUD_application_Angular_Docker
+      dockerfile: Dockerfile
+    volumes:
+      - /app/node_modules
+      - ./CRUD_application_Angular_Docker:/app
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
