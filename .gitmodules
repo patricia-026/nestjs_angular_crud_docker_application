@@ -1,0 +1,6 @@
+[submodule "CRUD_application_NestJS_PostgreSQL_Docker"]
+	path = CRUD_application_NestJS_PostgreSQL_Docker
+	url = https://github.com/patricia-kovacs/CRUD_application_NestJS_PostgreSQL_Docker.git
+[submodule "CRUD_application_Angular_Docker"]
+	path = CRUD_application_Angular_Docker
+	url = https://github.com/patricia-kovacs/CRUD_application_Angular_Docker.git
